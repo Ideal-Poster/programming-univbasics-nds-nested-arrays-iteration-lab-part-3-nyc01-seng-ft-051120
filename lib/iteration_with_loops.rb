@@ -7,10 +7,10 @@ def join_nested_strings(src)
   while src[outer_count]
     inner_count = 0
     while src[outer_count][inner_count]
-      return_string += src[outer_count][inner_count] if 
+      return_string += src[outer_count][inner_count] if src[outer_count][inner_count].class == String
       inner_count += 1
     end
     outer_count += 1
   end
-  return_string
+  return_array.join(' ')
 end
